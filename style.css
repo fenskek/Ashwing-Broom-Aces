@@ -1,0 +1,151 @@
+/* Wizard War Hero portfolio: carved wood framing parchment pages, ink never black
+   (the game's own palette, docs/style-guide.md). */
+:root {
+  --parch: #f7e3b3;
+  --parch-2: #f1dcaa;
+  --parch-edge: #8a5a24;
+  --ink: #3a2208;
+  --ink-soft: #5e3d18;
+  --wood: #9a5a2a;
+  --wood-dark: #683816;
+  --wood-line: #3a1e08;
+  --brass: #e6b347;
+  --brass-hi: #fff0b0;
+  --gold: #ffc740;
+  --red: #db4238;
+  --amber: #f28c33;
+  --cream: #fff2c7;
+  --ward: #3fc2ff;
+  --violet: #9a5ad8;
+  --bg: #2a1708;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg) radial-gradient(ellipse at top, #4a2a10 0%, var(--bg) 70%) fixed;
+  color: var(--ink);
+  font: 18px/1.6 "Kurale", Georgia, serif;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: "Cinzel Decorative", Georgia, serif; line-height: 1.15; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0 0 .6em; }
+h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
+
+/* --- Hero --- */
+.hero { position: relative; min-height: 92vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(30, 14, 4, .92) 0%, rgba(30, 14, 4, .55) 40%, rgba(30, 14, 4, 0) 75%);
+}
+.hero-text { position: relative; z-index: 1; padding: 0 16px 6vh; max-width: 980px; margin: 0 auto; width: 100%; color: var(--cream); }
+.hero h1 {
+  font-size: clamp(2.4rem, 8vw, 5.2rem); margin: .2em 0 .25em; color: var(--cream);
+  text-shadow: 0 3px 0 #6b330f, 0 6px 18px rgba(0, 0, 0, .6);
+}
+.logline { font-size: clamp(1.05rem, 2.2vw, 1.3rem); max-width: 46em; text-shadow: 0 2px 6px rgba(0, 0, 0, .8); }
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.4em; }
+.toc a {
+  text-decoration: none; padding: .35em .9em; border-radius: 6px;
+  background: linear-gradient(var(--wood), var(--wood-dark)); border: 2px solid var(--wood-line);
+  color: var(--cream); box-shadow: inset 0 1px 0 #f0b878;
+}
+.toc a:hover { background: linear-gradient(#b06a32, var(--wood)); }
+
+/* Ribbon banners, as on the HUD */
+.ribbon {
+  display: inline-block; margin: 0; padding: .25em 1.2em; font-size: .9rem; color: var(--ink);
+  background: var(--gold); clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%);
+}
+
+/* --- Pages: parchment in a carved frame --- */
+main { padding: 4vh 0 2vh; }
+.page {
+  max-width: 980px; margin: 0 auto 5vh; padding: clamp(20px, 4vw, 48px);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, .35), transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(138, 90, 36, .18), transparent 45%),
+    var(--parch);
+  border: 10px solid var(--wood);
+  border-image: linear-gradient(135deg, #b06a32, var(--wood-dark) 50%, #b06a32) 1;
+  box-shadow: inset 0 0 60px rgba(138, 90, 36, .45), 0 10px 30px rgba(0, 0, 0, .5);
+}
+.page.wide { max-width: 1240px; }
+.lede { color: var(--ink-soft); margin-top: -.3em; }
+
+.stats { list-style: none; padding: 0; margin: 1.5em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; }
+.stats li {
+  background: var(--parch-2); border: 2px solid var(--parch-edge); border-radius: 10px; padding: .8em 1em;
+  display: flex; gap: .7em; align-items: center;
+}
+.stats b {
+  font: 700 2.2rem/1 "Cinzel Decorative", serif; color: var(--cream);
+  -webkit-text-stroke: 1.5px #6b330f; paint-order: stroke fill; text-shadow: 0 2px 2px rgba(0, 0, 0, .35);
+}
+.stats span { font-size: .95rem; line-height: 1.3; }
+
+.pillars, .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 1em 0 1.4em; }
+.pillars div, .class-grid div { border-top: 3px solid var(--brass); padding-top: .2em; }
+.pillars h3, .class-grid h3 { margin-top: .4em; }
+.pillars p, .class-grid p { margin: 0; font-size: .95rem; }
+
+/* Gallery of in-game shots */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.gallery figure, .pairs figure, .wide-fig { margin: 0; }
+.gallery img, .pairs img, .wide-fig img {
+  width: 100%; border: 3px solid var(--wood-dark); border-radius: 4px; background: #1a0d04;
+  aspect-ratio: 16 / 9; object-fit: cover; cursor: zoom-in;
+}
+.wide-fig { margin: 1.4em 0; }
+.wide-fig img { aspect-ratio: auto; }
+figcaption { font-size: .9rem; color: var(--ink-soft); margin-top: .35em; line-height: 1.35; }
+figcaption b { color: var(--ink); }
+
+.pairs { display: grid; gap: 22px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.pair h3 { grid-column: 1 / -1; margin: .2em 0 0; }
+.pair figcaption { font-size: .85rem; }
+
+/* Pipeline steps */
+.steps { list-style: none; counter-reset: s; padding: 0; margin: 1em 0; display: grid; gap: 10px; }
+.steps li {
+  counter-increment: s; display: grid; grid-template-columns: 2.4em 9em 1fr; gap: .6em; align-items: baseline;
+  padding: .55em .8em; background: var(--parch-2); border-left: 5px solid var(--brass); border-radius: 4px;
+}
+.steps li::before {
+  content: counter(s); font: 700 1.3rem "Cinzel Decorative", serif; color: var(--wood);
+}
+.notes { padding-left: 1.2em; }
+.notes li { margin-bottom: .5em; }
+
+/* Roadmap table */
+.roadmap { width: 100%; border-collapse: collapse; margin: 1em 0 1.6em; font-size: .97rem; }
+.roadmap th, .roadmap td { text-align: left; padding: .5em .6em; border-bottom: 1px solid rgba(138, 90, 36, .45); vertical-align: top; }
+.roadmap th { font-family: "Cinzel Decorative", serif; font-size: .9rem; border-bottom: 2px solid var(--parch-edge); }
+.roadmap td:first-child, .roadmap td:last-child, .roadmap th:last-child { text-align: center; white-space: nowrap; }
+.roadmap tfoot td { font-weight: bold; border-bottom: 0; border-top: 2px solid var(--parch-edge); }
+
+.timeline { list-style: none; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 7em 1fr; gap: .6em; padding: .4em 0; border-bottom: 1px dashed rgba(138, 90, 36, .5); }
+
+footer { text-align: center; color: #d9b98a; font-size: .85rem; padding: 2vh 16px 5vh; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(20, 10, 2, .92); display: none;
+  align-items: center; justify-content: center; padding: 16px; z-index: 10; cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-height: 92vh; border: 4px solid var(--wood); }
+
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .page { border-width: 6px; margin-left: 8px; margin-right: 8px; }
+  .gallery { grid-template-columns: 1fr; }
+  .pair { grid-template-columns: 1fr; }
+  .steps li { grid-template-columns: 2em 1fr; }
+  .steps li span { grid-column: 2; }
+  .timeline li { grid-template-columns: 1fr; gap: 0; }
+}

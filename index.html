@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wizard War Hero</title>
+<meta name="description" content="Wizard War Hero: an arcade aerial-combat game where battle-mages fly enchanted brooms. Portfolio and Tripo Creator Hub grant application by Kyle Fenske.">
+<meta property="og:title" content="Wizard War Hero">
+<meta property="og:description" content="Battle-mages on enchanted brooms, a war told backward through interviews. A solo Godot 4 game and its Tripo model pipeline.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kurale&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero-img" src="img/hero.jpg" alt="An in-game shot of a battle-mage on a broom over the burning Ash Quays">
+  <div class="hero-text">
+    <p class="ribbon gold">A solo game in Godot 4 · Tripo Creator Hub application</p>
+    <h1>Wizard War Hero</h1>
+    <p class="logline">Battle-mages fly enchanted brooms instead of jets. Fifteen years after the Ley War, a chronicler hunts down everyone who flew with, and against, the mercenary the enemy called <em>the Ashwing</em>.</p>
+    <nav class="toc">
+      <a href="#game">The game</a>
+      <a href="#world">The world</a>
+      <a href="#pipeline">The Tripo pipeline</a>
+      <a href="#roadmap">Model roadmap</a>
+      <a href="#grant">The ask</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="game" class="page">
+  <h2>The game</h2>
+  <p>An arcade aerial-combat campaign: lock-on dogfights, a radio drama in your ear and named rival aces, flown on brooms, wraiths, dwarven flying machines and dragons. Magic is the ammunition. Every spell you cast spends the same mana as your homing bolts, so a big spell costs you missiles.</p>
+  <ul class="stats">
+    <li><b>16</b><span>story missions over three acts</span></li>
+    <li><b>4</b><span>factions: mages, wraiths, dwarves, dragons</span></li>
+    <li><b>16</b><span>mounts, one shape per faction and class</span></li>
+    <li><b>19</b><span>spells in the grimoire</span></li>
+  </ul>
+  <div class="pillars">
+    <div><h3>Feel first</h3><p>A new player turns, locks and fires in under a minute.</p></div>
+    <div><h3>The sky is a stage</h3><p>Radio chatter, named aces and a narrator turn each sortie into a scene.</p></div>
+    <div><h3>Spells are ammunition</h3><p>Magic replaces missiles one for one, so combat stays readable.</p></div>
+    <div><h3>Choices leave marks</h3><p>Spare or slaughter: the people you meet remember which.</p></div>
+  </div>
+  <p>The story is told backward. Before each mission the chronicler Odile Marsh interviews someone who was there: an enemy ace who survived, a dockworker, the officer on the radio. The player never speaks; everyone else defines them.</p>
+</section>
+
+<section id="world" class="page wide">
+  <h2>The world, in the game today</h2>
+  <p class="lede">Every shot below is a real capture from the current build, taken by the game's own screenshot tests.</p>
+  <div class="gallery" id="gallery">
+    <figure><img src="img/m07_tunnel.jpg" alt="Flying up the corkscrew tunnel inside a storm" loading="lazy"><figcaption><b>Heron's Veil.</b> Up the corkscrew inside a storm the enemy is spinning.</figcaption></figure>
+    <figure><img src="img/m07_loom.jpg" alt="A geared weather-loom turning in the storm" loading="lazy"><figcaption><b>Heron's Veil.</b> One of the six weather-looms, each worth two bolts.</figcaption></figure>
+    <figure><img src="img/m10_isles.jpg" alt="Glassreach's crystal isles across a cold bay" loading="lazy"><figcaption><b>Glass City.</b> Glassreach, a city turned to crystal in the war's first week.</figcaption></figure>
+    <figure><img src="img/m10_hall.jpg" alt="Inside Glassreach's crystal hall" loading="lazy"><figcaption><b>Glass City.</b> In through the Spire's broken face, where people still live.</figcaption></figure>
+    <figure><img src="img/m09_street.jpg" alt="Flying down the covered timber street along a toll bridge" loading="lazy"><figcaption><b>Ironbell Toll.</b> Down the covered street to catch a heavy armoured ace from below.</figcaption></figure>
+    <figure><img src="img/m04_cathedral.jpg" alt="Diving on the Choir's siege camp by the cathedral" loading="lazy"><figcaption><b>Ninefold.</b> Breaking the Choir's war-harps in the siege camp under the cathedral.</figcaption></figure>
+    <figure><img src="img/m05_night.jpg" alt="A night raid under the clouds over the mine valley" loading="lazy"><figcaption><b>The Ashwing.</b> The night raid on the ley well, low and unseen.</figcaption></figure>
+    <figure><img src="img/m12_beam.jpg" alt="Slipping under a lighthouse beam at dusk" loading="lazy"><figcaption><b>Saltmarrow.</b> Your own side's lighthouse sweeps for you at dusk.</figcaption></figure>
+    <figure><img src="img/m13_bowl.jpg" alt="The Kindling Bowl crater ringed with crowds and barges" loading="lazy"><figcaption><b>Ceasefire.</b> The peace signing at a sky-sport match in an old ley crater.</figcaption></figure>
+    <figure><img src="img/m13_barges.jpg" alt="Guild barges and fire baskets inside the Kindling Bowl" loading="lazy"><figcaption><b>Ceasefire.</b> Guild barges on chains, fire baskets and the royal barge above.</figcaption></figure>
+    <figure><img src="img/m15_farm.jpg" alt="A floating farm island under the cracked Hollow Crown" loading="lazy"><figcaption><b>Five Against the Sky.</b> A farmhouse still on its field, torn up under the woken Crown.</figcaption></figure>
+    <figure><img src="img/m16_tunnel.jpg" alt="A spell lighting the dark Underspine tunnel" loading="lazy"><figcaption><b>Underspine.</b> Pitch dark: the only light is the spell you just cast.</figcaption></figure>
+  </div>
+</section>
+
+<section class="page wide">
+  <h2>From concept sheet to level</h2>
+  <p class="lede">Each map starts as a four-panel concept sheet (establishing view, signature moment, tight space, top-down map), then gets built and scored against it by a critic pass before it ships.</p>
+  <div class="pairs" id="pairs">
+    <div class="pair">
+      <h3>Glassreach</h3>
+      <figure><img src="img/concept_m10.jpg" alt="Concept sheet for Glassreach" loading="lazy"><figcaption>Concept sheet</figcaption></figure>
+      <figure><img src="img/m10_isles.jpg" alt="Glassreach in the game" loading="lazy"><figcaption>In the game</figcaption></figure>
+    </div>
+    <div class="pair">
+      <h3>The Toll Span</h3>
+      <figure><img src="img/concept_m09.jpg" alt="Concept sheet for the Toll Span" loading="lazy"><figcaption>Concept sheet</figcaption></figure>
+      <figure><img src="img/m09_street.jpg" alt="The Toll Span's covered street in the game" loading="lazy"><figcaption>In the game</figcaption></figure>
+    </div>
+    <div class="pair">
+      <h3>The Kindling Bowl</h3>
+      <figure><img src="img/concept_m13.jpg" alt="Concept sheet for the Kindling Bowl" loading="lazy"><figcaption>Concept sheet</figcaption></figure>
+      <figure><img src="img/m13_bowl.jpg" alt="The Kindling Bowl in the game" loading="lazy"><figcaption>In the game</figcaption></figure>
+    </div>
+    <div class="pair">
+      <h3>The Skirts of the Crown</h3>
+      <figure><img src="img/concept_m15.jpg" alt="Concept sheet for the Skirts of the Crown" loading="lazy"><figcaption>Concept sheet</figcaption></figure>
+      <figure><img src="img/m15_farm.jpg" alt="The Skirts of the Crown in the game" loading="lazy"><figcaption>In the game</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline" class="page">
+  <h2>The Tripo pipeline</h2>
+  <p>The levels are built from scripted Blender kits. The characters and mounts are where the game most needs a step up, and that's the job for Tripo. The pipeline is already working, tested on a free-tier export:</p>
+  <ol class="steps">
+    <li><b>Concept</b><span>A flat-coloured T-pose sheet with a back view, in the house style.</span></li>
+    <li><b>Tripo</b><span>Multi-view to 3D, smart segmentation, rigging.</span></li>
+    <li><b>Blender, scripted</b><span>Cut to the game's budget (400k to 20k triangles), turned to face forward, colours snapped to the house palette.</span></li>
+    <li><b>Godot</b><span>Drawn with the game's painted light, so every model sits in the same storybook world.</span></li>
+    <li><b>Critic</b><span>Every model is judged against the style guide before it's committed.</span></li>
+  </ol>
+  <figure class="wide-fig">
+    <img src="img/tripo_witch.jpg" alt="The Tripo witch after the scripted clean-up: side, front and back views" loading="lazy">
+    <figcaption>The first test: a free H2.5 export after the scripted clean-up. 17.5 MB and 400k triangles down to under 1 MB and 20k, with the texture repainted to the concept's colours.</figcaption>
+  </figure>
+  <h3>What the test taught us</h3>
+  <ul class="notes">
+    <li><b>The back matters most.</b> The chase camera sees a rider from behind. Single-image generation guesses the back and smears it; multi-view input fixes that.</li>
+    <li><b>Flat colour concepts win.</b> A T-pose concept with flat colour areas came out of Tripo clean. A painterly one needed its whole texture repainted.</li>
+    <li><b>Riders and mounts apart.</b> Generated separately, any rider can sit any of the four broom classes, and rigging can pose them.</li>
+  </ul>
+  <figure class="wide-fig">
+    <img src="img/procedural_lineup.jpg" alt="Today's mage riders, built from code primitives" loading="lazy">
+    <figcaption>Today's riders, built from code primitives. They play well; Tripo is how they get the character the levels now have.</figcaption>
+  </figure>
+</section>
+
+<section id="roadmap" class="page">
+  <h2>Model roadmap</h2>
+  <p>78 models, each with a written prompt, a concept image where one exists, and a save name the import scripts expect. Made in batches, most-seen first.</p>
+  <table class="roadmap">
+    <thead><tr><th>Batch</th><th>What</th><th>Models</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Player riders and mounts: mage brooms, wraith forms, dwarven machines and dragons in four classes each</td><td>23</td></tr>
+      <tr><td>2</td><td>Story cast and rival aces: Larkspur, Thistle, the Pale King, the Ninefold Choir, Black Heron, Ironbell, the Unbound Five</td><td>18</td></tr>
+      <tr><td>3</td><td>Enemy units, vessels and targets: war-sleds, barges, wagons, ward towers, Stormspires, the Crown's anchors</td><td>19</td></tr>
+      <tr><td>4</td><td>Landmark set pieces: one hero piece per map, from the lighthouse arch to the Hollow Crown</td><td>15</td></tr>
+      <tr><td>5</td><td>Hangar props for the four faction workshops</td><td>3</td></tr>
+    </tbody>
+    <tfoot><tr><td></td><td>Total</td><td>78</td></tr></tfoot>
+  </table>
+  <div class="class-grid">
+    <div><h3>Swift</h3><p>Light and quick: a lacquered racing broom, a wisp, a gyrocopter, a slim drake.</p></div>
+    <div><h3>Lancer</h3><p>Long and pointed: a spear-tipped broom, a serpent shroud, a biplane, a lance-horned wyrm.</p></div>
+    <div><h3>Bulwark</h3><p>Heavy and armoured: an iron-banded broom, a barrow shroud, a twin-rotor barge, a behemoth.</p></div>
+    <div><h3>Hexer</h3><p>Strange and ornate: a gnarled lantern broom, a crowned wraith, a rune-core tilt-rotor, a runescale wyrm.</p></div>
+  </div>
+</section>
+
+<section id="grant" class="page">
+  <h2>The ask</h2>
+  <p>A Tripo Creator Hub grant would cover the Pro plan for the production run: multi-view to 3D for clean backs, rigging for the riders and dragons, and commercial rights so the models can ship.</p>
+  <h3>What Tripo gets back</h3>
+  <ul class="notes">
+    <li><b>A shipped showcase.</b> 78 Tripo models in one consistent art style, across a full 16-mission campaign.</li>
+    <li><b>An open pipeline.</b> The Blender clean-up scripts (cut to budget, face forward, snap to a palette) published for other Godot developers.</li>
+    <li><b>A dev log.</b> Before-and-after posts for each batch: concept, Tripo output, in-game result.</li>
+  </ul>
+  <h3>Timeline</h3>
+  <ul class="timeline">
+    <li><b>Month 1</b><span>Batches 1 and 2: every rider, mount and named character.</span></li>
+    <li><b>Month 2</b><span>Batches 3 to 5: units, set pieces and hangars, then a full art pass on all 16 missions.</span></li>
+  </ul>
+</section>
+
+<section class="page about">
+  <h2>About</h2>
+  <p>Wizard War Hero is made by <b>Kyle Fenske</b>, solo, in Godot 4. The game is in active development: all 16 missions are playable end to end, and the art is mid-way through the move from greybox to painted storybook.</p>
+  <p class="contact">Follow along on GitHub: <a href="https://github.com/fenskek">github.com/fenskek</a></p>
+</section>
+
+</main>
+
+<footer>
+  <p>Wizard War Hero © 2026 Kyle Fenske. All rights reserved. Concept sheets are Kyle's own, generated with Gemini. In-game shots are from the current build.</p>
+</footer>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+<script>
+  // Click any shot to see it full size; click again (or Esc) to close.
+  const box = document.getElementById("lightbox"), big = box.querySelector("img");
+  document.querySelectorAll("main figure img").forEach(img => img.addEventListener("click", () => {
+    big.src = img.src; big.alt = img.alt; box.classList.add("open");
+  }));
+  box.addEventListener("click", () => box.classList.remove("open"));
+  addEventListener("keydown", e => { if (e.key === "Escape") box.classList.remove("open"); });
+</script>
+
+</body>
+</html>
